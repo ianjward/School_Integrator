@@ -1,0 +1,22 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chromebook Check-In</title>
+    <h1>Home Page!</h1>
+    <h3>Hi there, thanks for visiting the home page!</h3>
+</head>
+<body>
+    <form>
+        {% crispy form %}
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags %}
+                <script>alert("{{ message }}")</script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
